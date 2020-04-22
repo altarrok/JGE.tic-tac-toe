@@ -61,7 +61,12 @@ public class GameManager extends AbstractGame {
                 objects.add(new Board());
                 objects.add(new Player(menu.chosen, "Player"));
                 // ## AI PLAYER INIT ##
-                objects.add(new AIPlayer(menu.chosen == Board.Block.X ? Board.Block.O : Board.Block.X, 9));
+                try {
+                    GameObject aiPlayer = new AiPythonPlayer(menu.chosen == Board.Block.X ? Board.Block.O : Board.Block.X, 9);
+                    objects.add(aiPlayer);
+                } catch (Exception e) {
+                    objects.add(new AIPlayer(menu.chosen == Board.Block.X ? Board.Block.O : Board.Block.X, 9));
+                }
                 ref = new Referee((Board) getObject("Board"));
                 menu.setDead(true);
                 playing = true;
