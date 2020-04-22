@@ -49,7 +49,8 @@ public class AiPythonPlayer extends Player {
             for (Board.Block s : b) {
                 board += s.toString() + " ";
             }
-            board = board.substring(0, board.length() - 2);
+            board = board.substring(0, board.length() - 1);
+          System.out.println(board);
             working = true;
             try{
                 pb = new ProcessBuilder("python","src/ai/tic-tac-toe-ai.py", board);
