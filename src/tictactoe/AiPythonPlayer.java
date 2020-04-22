@@ -8,7 +8,7 @@ import java.io.InputStreamReader;
 /**
  * Your python file name should be: tic-tac-toe-ai.py
  * Your python file should take input as a String in form:
- * [EMPTY, EMPTY, EMPTY, X, O, X, EMPY, EMTY, EMPTY]
+ * EMPTY EMPTY EMPTY X O X EMPY EMTY EMPTY
  * Signifies board:
  * E E E
  * X 0 X
@@ -45,11 +45,11 @@ public class AiPythonPlayer extends Player {
     if (gm.isTurn() ^ selectedBlock == Board.Block.O && b != null) {
       try {
         if (!working) {
-            String board = "[";
+            String board = "";
             for (Board.Block s : b) {
-                board += s.toString() + ", ";
+                board += s.toString() + " ";
             }
-            board = board.substring(0, board.length() - 2) + "]";
+            board = board.substring(0, board.length() - 2);
             working = true;
             try{
                 pb = new ProcessBuilder("python","src/ai/tic-tac-toe-ai.py", board);
