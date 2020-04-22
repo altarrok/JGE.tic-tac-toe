@@ -6,6 +6,7 @@ import java.io.BufferedReader;
 import java.io.InputStreamReader;
 
 /**
+ * Your python file name should be: tic-tac-toe-ai.py
  * Your python file should take input as a String in form:
  * [EMPTY, EMPTY, EMPTY, X, O, X, EMPY, EMTY, EMPTY]
  * Signifies board:
