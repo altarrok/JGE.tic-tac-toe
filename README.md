@@ -8,3 +8,5 @@
  Here is an Executable, and a jar: [Executable](/run/tictactoe.exe) | [Jar](/run/tictactoe.jar)
  
  Additionally, if a tic-tac-toe-ai.py is provided, it is used, otherwise it will use built-in A.I.
+
+An example Python AI is provided in the projects file, this AI is written by [Kutluay Cakadur](https://github.com/Kutluay00) | [AI Repo](https://github.com/Kutluay00/tic-tac-toe-ai/blob/master/tic-tac-toe-ai.py)
