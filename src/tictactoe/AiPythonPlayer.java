@@ -6,7 +6,7 @@ import java.io.BufferedReader;
 import java.io.InputStreamReader;
 
 /**
- * Your pyhonn file should react if no additional args passed:
+ * Your python file should react if no additional args passed:
  * pyhon tic-tac-toe-ai.py SHOULD WORK
  * Your python file name should be: tic-tac-toe-ai.py
  * Your python file should take input as a String in form:
@@ -40,7 +40,6 @@ public class AiPythonPlayer extends Player {
                 throw new Exception();
             }
         }
-
     }
 
     @Override
@@ -55,7 +54,6 @@ public class AiPythonPlayer extends Player {
                 board += s.toString() + " ";
             }
             board = board.substring(0, board.length() - 1);
-          System.out.println(board);
             working = true;
             try{
                 pb = new ProcessBuilder("python","src/ai/tic-tac-toe-ai.py", board, selectedBlock.toString());
