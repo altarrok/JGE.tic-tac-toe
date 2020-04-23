@@ -6,15 +6,20 @@ import java.io.BufferedReader;
 import java.io.InputStreamReader;
 
 /**
+ * Your pyhonn file should react if no additional args passed:
+ * pyhon tic-tac-toe-ai.py SHOULD WORK
  * Your python file name should be: tic-tac-toe-ai.py
  * Your python file should take input as a String in form:
- * EMPTY EMPTY EMPTY X O X EMPY EMTY EMPTY
+ * EMPTY EMPTY EMPTY X O X EMPY EMPTY EMPTY
  * Signifies board:
  * E E E
  * X 0 X
  * E E E
  * Your python file must print
  * x y
+ * And a String:
+ * X or O
+ * Signifying Turn
  */
 public class AiPythonPlayer extends Player {
     private int depth;
@@ -53,10 +58,10 @@ public class AiPythonPlayer extends Player {
           System.out.println(board);
             working = true;
             try{
-                pb = new ProcessBuilder("python","src/ai/tic-tac-toe-ai.py", board);
+                pb = new ProcessBuilder("python","src/ai/tic-tac-toe-ai.py", board, selectedBlock.toString());
             } catch (Exception k) {
                 try {
-                    pb = new ProcessBuilder("python", "src/ai/tic-tac-toe-ai.py", board);
+                    pb = new ProcessBuilder("python", "src/ai/tic-tac-toe-ai.py", board, selectedBlock.toString());
                 } catch (Exception e) {
                     throw new Exception();
                 }
